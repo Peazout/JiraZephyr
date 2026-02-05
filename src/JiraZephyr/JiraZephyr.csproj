@@ -4,11 +4,30 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    
+    <!-- NuGet Package Metadata -->
+    <PackageId>JiraZephyr</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Peazout</Authors>
+    <Company>Peazout</Company>
+    <Product>JiraZephyr</Product>
+    <Description>A .NET Core C# library for connecting to Jira and the Zephyr Scale (formerly Zephyr for Jira) test management add-on. Supports both Cloud and On-Premise versions of Jira with multiple authentication methods.</Description>
+    <PackageTags>jira;zephyr;zephyr-scale;atlassian;api;rest;testing;test-management</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Peazout/JiraZephyr</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Peazout/JiraZephyr</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Initial release with support for Jira and Zephyr Scale Cloud and On-Premise APIs.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.2" />
     <PackageReference Include="System.Net.Http.Json" Version="10.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>

@@ -15,6 +15,20 @@ A .NET Core C# library for connecting to Jira and the Zephyr Scale (formerly Zep
 
 ## Installation
 
+### Via NuGet Package Manager
+
+```bash
+dotnet add package JiraZephyr
+```
+
+Or using the Package Manager Console in Visual Studio:
+
+```powershell
+Install-Package JiraZephyr
+```
+
+### From Source
+
 ```bash
 # Clone the repository
 git clone https://github.com/Peazout/JiraZephyr.git
