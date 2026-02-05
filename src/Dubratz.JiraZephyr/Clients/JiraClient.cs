@@ -6,6 +6,7 @@ using Dubratz.JiraZephyr.Configuration;
 using Dubratz.JiraZephyr.Interfaces;
 using Dubratz.JiraZephyr.Models.Jira;
 
+
 namespace Dubratz.JiraZephyr.Clients;
 
 /// <summary>
@@ -13,9 +14,9 @@ namespace Dubratz.JiraZephyr.Clients;
 /// </summary>
 public class JiraClient : IJiraClient, IDisposable
 {
-    private readonly HttpClient _httpClient;
-    private readonly JiraConfiguration _configuration;
-    private readonly bool _disposeHttpClient;
+    protected readonly HttpClient _httpClient;
+    protected readonly JiraConfiguration _configuration;
+    protected readonly bool _disposeHttpClient;
 
     /// <summary>
     /// Initializes a new instance of the JiraClient class with a configuration
@@ -47,7 +48,7 @@ public class JiraClient : IJiraClient, IDisposable
             _disposeHttpClient = false;
         }
 
-        _httpClient.BaseAddress = new Uri(_configuration.BaseUrl.TrimEnd('/') + "/rest/api/2/");
+        _httpClient.BaseAddress = new Uri(_configuration.BaseUrl.TrimEnd('/'));
         _httpClient.Timeout = TimeSpan.FromSeconds(_configuration.TimeoutSeconds);
 
         SetupAuthentication();

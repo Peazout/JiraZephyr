@@ -23,7 +23,15 @@ public interface IZephyrClient
     /// <param name="objective">The test case objective</param>
     /// <param name="cancellationToken">Cancellation token</param>
     /// <returns>The created test case</returns>
-    Task<ZephyrTestCase?> CreateTestCaseAsync(long projectId, string name, string? objective = null, CancellationToken cancellationToken = default);
+    Task<ZephyrTestCase?> PostTestCaseAsync(long projectId, string name, string? objective = null, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a test case by its key
+    /// </summary>
+    /// <param name="testCaseKey">Testcase ID</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    /// <returns></returns>
+    Task DeleteTestCaseAsync(string testCaseKey, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Gets a test execution by its ID

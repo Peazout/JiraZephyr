@@ -21,14 +21,15 @@ public class JiraConfiguration
     public string ApiToken { get; set; } = string.Empty;
 
     /// <summary>
+    /// Optional: Personal Access Token (PAT) for authentication (alternative to Username/ApiToken)
+    /// </summary>
+    public string? PersonalAccessToken { get; set; }
+
+    /// <summary>
     /// Indicates if this is a Jira Cloud instance (true) or On-Premise (false)
     /// </summary>
     public bool IsCloud { get; set; } = true;
 
-    /// <summary>
-    /// Optional: Personal Access Token (PAT) for authentication (alternative to Username/ApiToken)
-    /// </summary>
-    public string? PersonalAccessToken { get; set; }
 
     /// <summary>
     /// Timeout for HTTP requests in seconds

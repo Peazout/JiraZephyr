@@ -3,45 +3,6 @@ using System.Text.Json.Serialization;
 namespace Dubratz.JiraZephyr.Models.Zephyr;
 
 /// <summary>
-/// Represents a Zephyr test case
-/// </summary>
-public class ZephyrTestCase
-{
-    [JsonPropertyName("id")]
-    public string? Id { get; set; }
-
-    [JsonPropertyName("key")]
-    public string? Key { get; set; }
-
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-
-    [JsonPropertyName("objective")]
-    public string? Objective { get; set; }
-
-    [JsonPropertyName("precondition")]
-    public string? Precondition { get; set; }
-
-    [JsonPropertyName("projectId")]
-    public long? ProjectId { get; set; }
-
-    [JsonPropertyName("priority")]
-    public string? Priority { get; set; }
-
-    [JsonPropertyName("status")]
-    public string? Status { get; set; }
-
-    [JsonPropertyName("folderId")]
-    public long? FolderId { get; set; }
-
-    [JsonPropertyName("createdOn")]
-    public DateTime? CreatedOn { get; set; }
-
-    [JsonPropertyName("updatedOn")]
-    public DateTime? UpdatedOn { get; set; }
-}
-
-/// <summary>
 /// Represents a Zephyr test execution
 /// </summary>
 public class ZephyrTestExecution

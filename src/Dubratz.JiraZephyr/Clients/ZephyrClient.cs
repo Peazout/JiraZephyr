@@ -9,17 +9,14 @@ namespace Dubratz.JiraZephyr.Clients;
 /// <summary>
 /// Client for interacting with Zephyr Scale REST API (Cloud and On-Premise)
 /// </summary>
-public class ZephyrClient : IZephyrClient, IDisposable
+public partial class ZephyrClient : JiraClient, IZephyrClient, IDisposable
 {
-    private readonly HttpClient _httpClient;
-    private readonly ZephyrConfiguration _configuration;
-    private readonly bool _disposeHttpClient;
 
     /// <summary>
     /// Initializes a new instance of the ZephyrClient class with a configuration
     /// </summary>
     /// <param name="configuration">The Zephyr configuration</param>
-    public ZephyrClient(ZephyrConfiguration configuration)
+    public ZephyrClient(JiraConfiguration configuration)
         : this(configuration, null)
     {
     }
@@ -29,56 +26,18 @@ public class ZephyrClient : IZephyrClient, IDisposable
     /// </summary>
     /// <param name="configuration">The Zephyr configuration</param>
     /// <param name="httpClient">Optional HttpClient instance. If not provided, a new one will be created.</param>
-    public ZephyrClient(ZephyrConfiguration configuration, HttpClient? httpClient)
+    public ZephyrClient(JiraConfiguration configuration, HttpClient? httpClient) : base(configuration, httpClient)
     {
-        _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
-        _configuration.Validate();
 
-        if (httpClient == null)
+        if (!configuration.IsCloud)
         {
-            _httpClient = new HttpClient();
-            _disposeHttpClient = true;
+            _httpClient.BaseAddress = new Uri(_configuration.BaseUrl!.TrimEnd('/') + "/rest/atm/1.0/");
         }
         else
         {
-            _httpClient = httpClient;
-            _disposeHttpClient = false;
+            _httpClient.BaseAddress = new Uri(_configuration.BaseUrl!.TrimEnd('/') + "tm4j/v2/");
         }
 
-        _httpClient.BaseAddress = new Uri(_configuration.BaseUrl!.TrimEnd('/') + "/");
-        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _configuration.ApiToken);
-        _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-    }
-
-    /// <inheritdoc/>
-    public async Task<ZephyrTestCase?> GetTestCaseAsync(string testCaseId, CancellationToken cancellationToken = default)
-    {
-        if (string.IsNullOrWhiteSpace(testCaseId))
-            throw new ArgumentException("Test case ID cannot be null or empty", nameof(testCaseId));
-
-        var response = await _httpClient.GetAsync($"testcases/{testCaseId}", cancellationToken);
-        response.EnsureSuccessStatusCode();
-
-        return await response.Content.ReadFromJsonAsync<ZephyrTestCase>(cancellationToken: cancellationToken);
-    }
-
-    /// <inheritdoc/>
-    public async Task<ZephyrTestCase?> CreateTestCaseAsync(long projectId, string name, string? objective = null, CancellationToken cancellationToken = default)
-    {
-        if (string.IsNullOrWhiteSpace(name))
-            throw new ArgumentException("Test case name cannot be null or empty", nameof(name));
-
-        var requestBody = new
-        {
-            projectId,
-            name,
-            objective
-        };
-
-        var response = await _httpClient.PostAsJsonAsync("testcases", requestBody, cancellationToken);
-        response.EnsureSuccessStatusCode();
-
-        return await response.Content.ReadFromJsonAsync<ZephyrTestCase>(cancellationToken: cancellationToken);
     }
 
     /// <inheritdoc/>
