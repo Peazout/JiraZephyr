@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace JiraZephyr.Models.Zephyr;
+namespace Dubratz.JiraZephyr.Models.Zephyr;
 
 /// <summary>
 /// Represents a Zephyr test case

@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace JiraZephyr.Models.Jira;
+namespace Dubratz.JiraZephyr.Models.Jira;
 
 /// <summary>
 /// Represents a Jira issue

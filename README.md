@@ -1,4 +1,4 @@
-# JiraZephyr
+# Dubratz.JiraZephyr
 
 A .NET Core C# library for connecting to Jira and the Zephyr Scale (formerly Zephyr for Jira) test management add-on. Supports both **Cloud** and **On-Premise** versions of Jira.
 
@@ -18,23 +18,23 @@ A .NET Core C# library for connecting to Jira and the Zephyr Scale (formerly Zep
 ### Via NuGet Package Manager
 
 ```bash
-dotnet add package JiraZephyr
+dotnet add package Dubratz.JiraZephyr
 ```
 
 Or using the Package Manager Console in Visual Studio:
 
 ```powershell
-Install-Package JiraZephyr
+Install-Package Dubratz.JiraZephyr
 ```
 
 ### From Source
 
 ```bash
 # Clone the repository
-git clone https://github.com/Peazout/JiraZephyr.git
+git clone https://github.com/Peazout/Dubratz.JiraZephyr.git
 
 # Build the solution
-cd JiraZephyr
+cd Dubratz.JiraZephyr
 dotnet build
 
 # Run tests
@@ -48,8 +48,8 @@ dotnet test
 #### Cloud Configuration
 
 ```csharp
-using JiraZephyr.Configuration;
-using JiraZephyr.Clients;
+using Dubratz.JiraZephyr.Configuration;
+using Dubratz.JiraZephyr.Clients;
 
 // Configure for Jira Cloud with API Token
 var config = new JiraConfiguration
@@ -117,8 +117,8 @@ using var jiraClient = new JiraClient(config);
 #### Cloud Configuration
 
 ```csharp
-using JiraZephyr.Configuration;
-using JiraZephyr.Clients;
+using Dubratz.JiraZephyr.Configuration;
+using Dubratz.JiraZephyr.Clients;
 
 // Configure for Zephyr Scale Cloud
 var config = new ZephyrConfiguration
@@ -208,9 +208,9 @@ using var zephyrClient = new ZephyrClient(config);
 ## Project Structure
 
 ```
-JiraZephyr/
+Dubratz.JiraZephyr/
 ├── src/
-│   └── JiraZephyr/
+│   └── Dubratz.JiraZephyr/
 │       ├── Clients/           # API client implementations
 │       ├── Configuration/     # Configuration classes
 │       ├── Interfaces/        # Client interfaces
@@ -218,7 +218,7 @@ JiraZephyr/
 │           ├── Jira/         # Jira models
 │           └── Zephyr/       # Zephyr models
 └── tests/
-    └── JiraZephyr.Tests/     # Unit tests
+    └── Dubratz.JiraZephyr.Tests/     # Unit tests
 ```
 
 ## Contributing

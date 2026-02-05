@@ -1,6 +1,6 @@
-using JiraZephyr.Models.Jira;
+using Dubratz.JiraZephyr.Models.Jira;
 
-namespace JiraZephyr.Interfaces;
+namespace Dubratz.JiraZephyr.Interfaces;
 
 /// <summary>
 /// Interface for Jira client operations

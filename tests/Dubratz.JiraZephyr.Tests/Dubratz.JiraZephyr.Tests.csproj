@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\JiraZephyr\JiraZephyr.csproj" />
+    <ProjectReference Include="..\..\src\Dubratz.JiraZephyr\Dubratz.JiraZephyr.csproj" />
   </ItemGroup>
 
 </Project>

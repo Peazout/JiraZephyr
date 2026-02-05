@@ -1,4 +1,4 @@
-namespace JiraZephyr.Configuration;
+namespace Dubratz.JiraZephyr.Configuration;
 
 /// <summary>
 /// Configuration for connecting to Jira (Cloud or On-Premise)

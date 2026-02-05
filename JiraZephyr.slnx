@@ -1,8 +1,0 @@
-<Solution>
-  <Folder Name="/src/">
-    <Project Path="src/JiraZephyr/JiraZephyr.csproj" />
-  </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/JiraZephyr.Tests/JiraZephyr.Tests.csproj" />
-  </Folder>
-</Solution>
