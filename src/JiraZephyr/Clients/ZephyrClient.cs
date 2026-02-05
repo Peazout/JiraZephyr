@@ -181,7 +181,7 @@ public class ZephyrClient : IZephyrClient, IDisposable
     {
         if (_disposeHttpClient)
         {
-            _httpClient?.Dispose();
+            _httpClient.Dispose();
         }
     }
 }

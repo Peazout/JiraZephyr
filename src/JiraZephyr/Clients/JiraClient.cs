@@ -172,7 +172,7 @@ public class JiraClient : IJiraClient, IDisposable
     {
         if (_disposeHttpClient)
         {
-            _httpClient?.Dispose();
+            _httpClient.Dispose();
         }
     }
 }
