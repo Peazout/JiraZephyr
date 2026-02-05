@@ -1,10 +1,10 @@
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using JiraZephyr.Configuration;
-using JiraZephyr.Interfaces;
-using JiraZephyr.Models.Zephyr;
+using Dubratz.JiraZephyr.Configuration;
+using Dubratz.JiraZephyr.Interfaces;
+using Dubratz.JiraZephyr.Models.Zephyr;
 
-namespace JiraZephyr.Clients;
+namespace Dubratz.JiraZephyr.Clients;
 
 /// <summary>
 /// Client for interacting with Zephyr Scale REST API (Cloud and On-Premise)

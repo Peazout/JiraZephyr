@@ -1,6 +1,6 @@
-using JiraZephyr.Models.Zephyr;
+using Dubratz.JiraZephyr.Models.Zephyr;
 
-namespace JiraZephyr.Interfaces;
+namespace Dubratz.JiraZephyr.Interfaces;
 
 /// <summary>
 /// Interface for Zephyr client operations

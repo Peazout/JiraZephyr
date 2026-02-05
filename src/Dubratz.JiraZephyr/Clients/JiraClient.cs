@@ -2,11 +2,11 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
-using JiraZephyr.Configuration;
-using JiraZephyr.Interfaces;
-using JiraZephyr.Models.Jira;
+using Dubratz.JiraZephyr.Configuration;
+using Dubratz.JiraZephyr.Interfaces;
+using Dubratz.JiraZephyr.Models.Jira;
 
-namespace JiraZephyr.Clients;
+namespace Dubratz.JiraZephyr.Clients;
 
 /// <summary>
 /// Client for interacting with Jira REST API (Cloud and On-Premise)

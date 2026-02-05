@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Dubratz.JiraZephyr/Dubratz.JiraZephyr.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Dubratz.JiraZephyr.Tests/Dubratz.JiraZephyr.Tests.csproj" />
+  </Folder>
+</Solution>

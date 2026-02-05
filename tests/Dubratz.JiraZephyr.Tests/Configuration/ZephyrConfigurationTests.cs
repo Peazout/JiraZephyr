@@ -1,7 +1,7 @@
-using JiraZephyr.Configuration;
+using Dubratz.JiraZephyr.Configuration;
 using Xunit;
 
-namespace JiraZephyr.Tests.Configuration;
+namespace Dubratz.JiraZephyr.Tests.Configuration;
 
 public class ZephyrConfigurationTests
 {

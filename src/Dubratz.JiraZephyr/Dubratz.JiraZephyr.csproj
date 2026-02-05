@@ -6,16 +6,16 @@
     <Nullable>enable</Nullable>
     
     <!-- NuGet Package Metadata -->
-    <PackageId>JiraZephyr</PackageId>
+    <PackageId>Dubratz.JiraZephyr</PackageId>
     <Version>1.0.0</Version>
     <Authors>Peazout</Authors>
     <Company>Peazout</Company>
-    <Product>JiraZephyr</Product>
+    <Product>Dubratz.JiraZephyr</Product>
     <Description>A .NET Core C# library for connecting to Jira and the Zephyr Scale (formerly Zephyr for Jira) test management add-on. Supports both Cloud and On-Premise versions of Jira with multiple authentication methods.</Description>
     <PackageTags>jira;zephyr;zephyr-scale;atlassian;api;rest;testing;test-management</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Peazout/JiraZephyr</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Peazout/JiraZephyr</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Peazout/Dubratz.JiraZephyr</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Peazout/Dubratz.JiraZephyr</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>Initial release with support for Jira and Zephyr Scale Cloud and On-Premise APIs.</PackageReleaseNotes>
